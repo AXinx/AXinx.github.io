@@ -474,7 +474,13 @@
 <p>然后完全可以按照next官网上的进行配置。<br><a href="">http://theme-next.iissnan.com/getting-started.html</a></p>
 <p>配置完成之后在按照下边的指令即可完成主题的修改。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #清理缓存</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>以上基本上就是github+hexo搭建博客的内容了，更多的主题修改的探索以后用到了再说吧。</p>
+<h3 id="6-插入图片的Tips"><a href="#6-插入图片的Tips" class="headerlink" title="6.插入图片的Tips"></a>6.插入图片的Tips</h3><p>这里将本地的图片插入文章中，有两种方式。</p>
+<p>一种是直接将图片放在source下的images文件夹下，然后在文中引用的时候路径写成(/images/xx.jpg)就可以了。</p>
+<p>另外一种是将把主页配置文件中的_config.yml里的post_asset_folder: 这个选项设置为true;</p>
+<p>在hexo目录下执行<code>npm install hexo-asset-image --save</code>，这是下载安装一个可以上传本地图片的插件;</p>
+<p>然后，运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹;</p>
+<p>最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：<code>![](图片.jpg)</code> 。<strong>(注意：这里只写图片名即可，不用添加任何路径！)</strong></p>
+<p>以上基本上就是github+hexo搭建博客的内容了，更多的主题和内容的探索以后用到了再说吧。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/10/04/github-hexo-建个人blog/#more" rel="contents">
