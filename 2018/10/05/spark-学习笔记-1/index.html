@@ -88,7 +88,7 @@
 <meta property="og:description" content="记录一下spark的安装以及开始使用。python版本的。 理解sparkSpark是一个大一统的软件栈。包含了很多组件，见下图。 其中，spark SQL，提供了SQL接口；spark streaming，进行数据流的计算；MLlib，机器学习库；GraphX，操作图的程序库。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://axinx.github.io/2018/10/05/spark-学习笔记-1/spark组件.jpeg">
-<meta property="og:updated_time" content="2018-10-12T16:43:32.308Z">
+<meta property="og:updated_time" content="2018-10-12T16:45:47.918Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spark 学习笔记 1">
 <meta name="twitter:description" content="记录一下spark的安装以及开始使用。python版本的。 理解sparkSpark是一个大一统的软件栈。包含了很多组件，见下图。 其中，spark SQL，提供了SQL接口；spark streaming，进行数据流的计算；MLlib，机器学习库；GraphX，操作图的程序库。">
@@ -338,8 +338,7 @@
 <p>下载到本地之后，解压文件。 <code>tar -xf spark-***-bin-hadoop**.tgz(对应着你下载的版本号)</code></p>
 <p>3.更新profile文件</p>
 <p>在 <code>sudo vi /home/user/.profile</code> (我的服务器上的路径) 中加入：</p>
-<p><code>SPARK_HOME=/home/vincent/Downloads/spark 
-（解压后的包所在的路径, 这里将解压后的Spark重新命名为spark了）</code><br><code>PATH=$PATH:${SPARK_HOME}/bin</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SPARK_HOME=/home/vincent/Downloads/spark #解压后的包所在的路径, 这里将解压后的Spark重新命名为spark了</span><br><span class="line">PATH=$PATH:$&#123;SPARK_HOME&#125;/bin</span><br></pre></td></tr></table></figure>
 <p>这样spark就安装完成了。 然后就可以打开运行了。</p>
 <h3 id="spark的使用"><a href="#spark的使用" class="headerlink" title="spark的使用"></a>spark的使用</h3><p>打开python版本spark的话，就在vim中运行 <code>./bin/pyspark/</code>就可以打开了python，并且可以写程序了，这样做不需要引入SparkContext。比如，写一个进行行数统计的脚本，这里要把文件创建成RDD的类型。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lines = sc.textFile(&quot;READEME.md&quot;) #创建一个名为lines的RDD</span><br><span class="line">lines.count() #统计RDD中的元素个数</span><br><span class="line">lines.first() #这个RDD中的第一个元素，也就是READEME.md的第一行</span><br></pre></td></tr></table></figure>
