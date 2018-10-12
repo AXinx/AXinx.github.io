@@ -88,7 +88,7 @@
 <meta property="og:description" content="记录一下spark的安装以及开始使用。python版本的。 理解sparkSpark是一个大一统的软件栈。包含了很多组件，见下图。 其中，spark SQL，提供了SQL接口；spark streaming，进行数据流的计算；MLlib，机器学习库；GraphX，操作图的程序库。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://axinx.github.io/2018/10/05/spark-学习笔记-1/spark组件.jpeg">
-<meta property="og:updated_time" content="2018-10-12T16:31:44.424Z">
+<meta property="og:updated_time" content="2018-10-12T16:36:09.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spark 学习笔记 1">
 <meta name="twitter:description" content="记录一下spark的安装以及开始使用。python版本的。 理解sparkSpark是一个大一统的软件栈。包含了很多组件，见下图。 其中，spark SQL，提供了SQL接口；spark streaming，进行数据流的计算；MLlib，机器学习库；GraphX，操作图的程序库。">
@@ -328,7 +328,7 @@
 <a id="more"></a>
 <p>Spark core实现了spark的基本功能，比如任务调度，内存管理等等，另外包含了弹性分布式数据集（<strong>RDD</strong>）。RDD就是spark的数据类型，后边用到了再说。</p>
 <p><img src="/2018/10/05/spark-学习笔记-1/spark组件.jpeg" alt=""></p>
-<p>spark可以高效的在一个计算节点到上千个计算节点之间计算，这里的节点就是计算的主机。因此，spark可以在各种<strong>集群管理器</strong>上运行，比如Hadoop YARN，Apache Mesos等等。所以hadoop更低层一些，管理集群，而spark是可以利用这些集群进行计算。</p>
+<p>spark可以高效的在一个计算节点到上千个计算节点之间计算，这里的节点就是计算的主机。因此，spark可以在各种<strong>集群管理器</strong>上运行，比如Hadoop YARN，Apache Mesos等等。所以hadoop更底层一些，管理集群，而spark是可以利用这些集群进行计算。</p>
 <h3 id="spark的安装"><a href="#spark的安装" class="headerlink" title="spark的安装"></a>spark的安装</h3><p>spark的安装很简单，但是需要一些环境以及安装后需要配置一些环境。有以下一些步骤。</p>
 <p>1.先检查java环境。</p>
 <p><code>java -version</code></p>
